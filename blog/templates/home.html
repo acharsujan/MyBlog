@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Welcome to my blog!</h1>
+
+	{% for post in all_posts %}
+		<h3>{{post.title}}</h3>
+		<span>Posted on {{post.timestrap|timesince}} ago</span>
+		<p>{{post.body|linebreaksbr}}</p>
+		<br><br>
+	{% endfor %}
+
+</body>
+</html>
